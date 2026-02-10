@@ -68,3 +68,19 @@ console.log("\nPrices after discounts:");
 products.forEach(product => {
     console.log(`${product.name} | ${product.category} | $${product.price.toFixed(2)}`);
     });
+
+// Created a variable for customer type so additional discounts can be applied to the final total.
+
+let customerType = "student"
+let orderTotal = 30
+
+if (customerType === "student"){
+    orderTotal*=(1-0.05);
+} else if (customerType === "senior"){
+    orderTotal*=(1-0.07);
+} else if (customerType === "military"){
+    orderTotal*=(1-0.08);
+}
+
+//Cheking if the student discount is applied properly.
+console.log(`Your order total is $${orderTotal} after applying the ${customerType} discount`)
