@@ -72,15 +72,19 @@ products.forEach(product => {
 // Created a variable for customer type so additional discounts can be applied to the final total.
 
 let customerType = "student"
-let orderTotal = 30
+let orderTotal = 54
+// -5% discount of total for students.
+let studentDiscount = 1-0.05
+// -7% discount of total for seniors.
+let seniorDiscount = 1-0.07
 
 if (customerType === "student"){
-    orderTotal*=(1-0.05);
+    orderTotal*=studentDiscount;
 } else if (customerType === "senior"){
-    orderTotal*=(1-0.07);
-} else if (customerType === "military"){
-    orderTotal*=(1-0.08);
+    orderTotal*=seniorDiscount;
+} else {
+    orderTotal = orderTotal;
 }
 
 //Cheking if the student discount is applied properly.
-console.log(`Your order total is $${orderTotal} after applying the ${customerType} discount`)
+console.log(`\nYour order total is $${orderTotal.toFixed(2)} after applying the ${customerType} discount.`)
