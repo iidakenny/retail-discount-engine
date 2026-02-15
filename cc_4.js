@@ -88,3 +88,47 @@ if (customerType === "student"){
 
 //Cheking if the student discount is applied properly.
 console.log(`\nYour order total is $${orderTotal.toFixed(2)} after applying the ${customerType} discount.`)
+
+let customers = [
+    {
+        order: 1,
+        customerType: "student",
+        cart: [
+            {
+                product: "TV",
+                quantity: 2
+            },
+            {
+                product: "T-Shirt",
+                quantity: 3
+            }
+
+        ]
+    },
+    {
+        order: 2,
+        customerType: "senior",
+        cart: [
+            {
+                product: "Sofa",
+                quantity: 5
+            },
+            {
+                product: "Wool yarn, 100g",
+                quantity: 10
+            }
+        ]
+    },
+    {
+        order: 3,
+        customerType: "regular",
+        cart: [
+            {
+                product: "Banana",
+                quantity: 45
+            }
+        ]
+    }
+
+];
+
