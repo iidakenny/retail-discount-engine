@@ -136,7 +136,8 @@ let customers = [
 
 ];
 
-//Looping throught the customer order while checking the invenotry and substr. the bought amount, calculating the total with discounts, and logging the customer number and order toal.
+
+//Looping throught the customer order while checking the invenotry and substr. the bought amount, calculating the total with discounts, and logging the customer number and order toal. Added an error message if inventory is lower than order amount.
 
 for (let customer of customers) {
     let orderTotal = 0;
@@ -149,7 +150,7 @@ for (let customer of customers) {
             product.inventory -= item.quantity;
         }
         else {
-            console.log(`Inventory too low for product: ${item.product}`)
+            console.log(`Unable to process because ${item.product} has too low inventory.`)
         }
     }
 
@@ -170,5 +171,6 @@ console.log("\nSummary of the first product in inventory:")
     console.log(`${key}: ${products[0][key]}`)
  }
 
- 
-
+ // Logging all product info of current inventory after purchases using Object.entries()
+console.log(Object.entries(products)
+);
